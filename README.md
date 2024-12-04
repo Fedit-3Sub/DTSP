@@ -4,14 +4,15 @@
 
 # GetStart
 1) portal install
-```version: '3.8'
+```yaml
+version: '3.8'
 
 services:
   union-twin-fe:
     image: fdttwin/union-twin-fe:latest
     restart: always
     environment:
-      - NDXPRO_ENV_TOKEN=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMzOTkwNTQwfQ._VG-hAh6cVwgIkNn9Qg5YGYI5h6twPDssGoAePsI1Iw6QwhnLw1Dpjj2Xh773dLLzI4nPMpAM6jhD6hRVY99-w
+      - NDXPRO_ENV_TOKEN=${Token}
       - NDXPRO_ENV_API_URL=http://HOST=172.16.28.220:54002
       - NDXPRO_ENV_API_OUTSIDE_URL=http://HOST=172.16.28.220:54002
       - NDXPRO_ENV_DIGITAL_TWIN_SEARCH_URL=http://220.124.222.86:8084/meta/exsearch/list
@@ -31,12 +32,17 @@ networks:
     external: true
 ```
 
+
 2) portal run
-```docker-compose up -d
+
+```cmd
+docker-compose up -d
 ```
 
 3) portal down
-```docker-compose down
+   
+```cmd
+docker-compose down
 ```
 
 # 연합트윈 프레임워크
