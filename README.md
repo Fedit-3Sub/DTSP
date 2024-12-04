@@ -12,7 +12,7 @@ services:
     image: fdttwin/union-twin-fe:latest
     restart: always
     environment:
-      - NDXPRO_ENV_TOKEN=${Token}
+      - NDXPRO_ENV_TOKEN={Token}
       - NDXPRO_ENV_API_URL=http://220.124.222.90:54002
       - NDXPRO_ENV_API_OUTSIDE_URL=http://220.124.222.90:54002
       - NDXPRO_ENV_DIGITAL_TWIN_SEARCH_URL=http://220.124.222.86:8084/meta/exsearch/list
