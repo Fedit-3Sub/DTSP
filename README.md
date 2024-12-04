@@ -8,17 +8,27 @@
 
 services:
   union-twin-fe:
-    image: public.ecr.aws/y6m5z3z0/fede/union-twin-fe:latest
+    image: fdttwin/union-twin-fe:latest
     restart: always
     environment:
+      - NDXPRO_ENV_TOKEN=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMzOTkwNTQwfQ._VG-hAh6cVwgIkNn9Qg5YGYI5h6twPDssGoAePsI1Iw6QwhnLw1Dpjj2Xh773dLLzI4nPMpAM6jhD6hRVY99-w
+      - NDXPRO_ENV_API_URL=http://{HOST}:54002
+      - NDXPRO_ENV_API_OUTSIDE_URL=http://{HOST}:54002
       - NDXPRO_ENV_DIGITAL_TWIN_SEARCH_URL=http://220.124.222.86:8084/meta/exsearch/list
-      - NDXPRO_ENV_TOKEN=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MjAwMDE2MzQ2NH0.9Ed_V3BRvA9ASU8tcFxS7Wrx16ACYV5Chn3MHb_6TUlIhTW8uPNG2d6ocNCyIBp4DNU84VqxCatLnzJc0_7cCA
-      - NDXPRO_ENV_API_URL=http://172.16.28.222:54002
-      - NDXPRO_ENV_PREDICTOR_TOOL_INSIDE_URL=http://localhost:8000
-      - NDXPRO_ENV_API_OUTSIDE_URL=http://210.217.93.129:54003
-      - NDXPRO_ENV_PREDICTOR_TOOL_OUTSIDE_URL=http://localhost:8000
+      - NDXPRO_ENV_VIEWER_URL=http://220.124.222.90:50038
+      - NDXPRO_ENV_PREDICTOR_TOOL_URL=http://220.124.222.82:18080
+      - NDXPRO_ENV_DISCRETE_SIMULATOR_URL=http://220.124.222.89
+      - NDXPRO_ENV_SERVICE_LOGIC_TOOL_URL=http://bigsoft.iptime.org:9900/keti
+      - NDXPRO_ENV_DIGITAL_TWIN_METADATA_REGISTRATION=http://220.124.222.86:8084/loginpass?to=/meta/exmanage/dt
+      - NDXPRO_ENV_METADATA_VISUALIZATION_GRAPH=http://220.124.222.86:8084/loginpass?to=/meta/exmedatagraph
+      - NDXPRO_ENV_UNION_OBJECT_SYNC_ENGINE_MANAGEMENT=http://220.124.222.84:5173
+      - NDXPRO_ENV_VERIFICATION_DATA_ADDITION_MANAGEMENT=http://220.124.222.85:9102
     ports:
       - '50031:80'
+networks:
+  default:
+    name: ndxpro
+    external: true
 ```
 
 # 연합트윈 프레임워크
