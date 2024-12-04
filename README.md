@@ -31,6 +31,14 @@ networks:
     external: true
 ```
 
+2) portal run
+```docker-compose up -d
+```
+
+3) portal down
+```docker-compose down
+```
+
 # 연합트윈 프레임워크
 ![image](https://github.com/user-attachments/assets/91f2cbcd-73f2-43fd-868c-f39799a546f6)
 
