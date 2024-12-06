@@ -52,7 +52,6 @@ docker-compose down
 ![image](https://github.com/user-attachments/assets/640a2d62-8926-4f18-8034-e8e49be17088)
 
 # Funding
-|Project Name|Funding Agency| Link|
-|--------|----------------------|-----------|
-|FeDiT|ETRI|https://github.com/etri/FeDiT|
+This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded
+by the Korea government (MSIT) (No.2022-0-00431, Development of open service platform and creation technology of federated intelligent digital twin, 100%).
 
